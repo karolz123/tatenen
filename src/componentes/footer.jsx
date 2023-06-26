@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 
-function Footer() {
+function Footer(props) {
 
 
   return (
@@ -9,14 +9,13 @@ function Footer() {
       <footer className="bg-color">
         <div className="container py-5">
             <p className="text-white text-center width d-flex">
-                ¿Tienes alguna duda, sugerencia, petición o reclamo?
-                Comunícate en cualquiera de nuestros medios de comunicación.
+                {props.mensaje}
             </p>
 
             <div className="row justify-content-center mt-4">
                 <div
                     className="col-2 bg-white d-flex justify-content-center p-2 align-items-self-end m-3 border-radius resp">
-                    <img src="./src/IMG/Iconos/Nuevos/Recurso 5icons.png" alt=""/>
+                    <img src={props.url} alt=""/>
                     <p className="mx-3">
                         <a href="mailto:Tatenen23@gmail.com" target="_blank">
                             Tatenen23@gmail.com
@@ -27,7 +26,7 @@ function Footer() {
 
                 <div
                     className="col-2 bg-white d-flex justify-content-center p-2 align-items-self-end m-3 border-radius resp">
-                    <img src="./src/IMG/Iconos/Nuevos/Recurso 6icons.png" alt=""/>
+                    <img src={props.telefono }alt="" />
                     <p className="mx-3">
                         <a href=" tel://6044926378" target="_blank">
                             (604) 492 63 78
@@ -38,11 +37,12 @@ function Footer() {
 
                 <div
                     className="col-2 bg-white d-flex justify-content-center p-2 align-items-self-end m-3 border-radius resp">
-                    <img src="./src/IMG/Iconos/Nuevos/Recurso 7icons.png" alt=""/>
+                    <img src={props.what} alt=""/>
                     <p className="mx-3">
                         <a href="https://wa.me/+573012497450" target="_blank">
-                            +57 301 2497450
+
                         </a>
+                        {props.nu}
 
                     </p>
                 </div>
@@ -51,7 +51,7 @@ function Footer() {
             <div className="row justify-content-center">
                 <div
                     className="col-2 bg-white d-flex justify-content-center p-2 align-items-self-end m-3 border-radius resp">
-                    <img src="./src/IMG/Iconos/Nuevos/Recurso 8icons.png" alt=""/>
+                    <img src= {props.insta} alt=""/>
                     <p className="mx-3">
                         <a href="https://www.instagram.com/tatenen023/" target="_blank">
                             @Tatenen023
@@ -62,7 +62,7 @@ function Footer() {
 
                 <div
                     className="col-2 bg-white d-flex justify-content-center p-2 align-items-self-end m-3 border-radius resp">
-                    <img src="./src/IMG/Iconos/Nuevos/Recurso 9icons.png" alt=""/>
+                    <img src={props.face} alt=""/>
                     <p className="mx-3">
                         <a href="https://www.facebook.com/profile.php?id=100092714514076" target="_blank">
                             Tatenen Medellin

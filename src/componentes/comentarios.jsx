@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 
-function Comentarios() {
+function Comentarios(props) {
 
 
   return (
@@ -11,9 +11,9 @@ function Comentarios() {
             <div className="col-4">
 
                 <h2 className="my-5">
-                    PITCHBOOK
+                    {props.titulo}
                 </h2>
-
+                
                 <iframe className="scribd_iframe_embed" title="Pitchbook Tatenen"
                     src="https://www.scribd.com/embeds/642323038/content?start_page=1&view_mode=slideshow&access_key=key-zU12YDl7msZRVCFTJDRQ"
                     tabindex="0" data-auto-height="false" data-aspect-ratio="0.7333333333333333" scrolling="no"
